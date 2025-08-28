@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #conteudo {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    button {
+      padding: 20px 40px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Tela inicial -->
+  <div id="inicio">
+    <button onclick="mostrar()">Recarregar 🔄</button>
+  </div>
+
+  <!-- Imagem + som escondidos -->
+  <div id="conteudo">
+    <img src="Imagem.jpg" alt="Surpresa!">
+    <audio id="audio" src="Som.mp3"></audio>
+  </div>
+
+  <script>
+    function mostrar() {
+      document.getElementById("inicio").style.display = "none";
+      document.getElementById("conteudo").style.display = "block";
+      document.getElementById("audio").play();
+    }
+  </script>
+</body>
+</html>
